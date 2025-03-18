@@ -44,7 +44,9 @@ export const useCartStore = create((set, get) => ({
     }
   },
   clearCart: async () => {
+    console.log("clearing cart...");
     set({ cart: [], coupon: null, total: 0, subtotal: 0 });
+    console.log("cart cleared");
   },
   addToCart: async (product) => {
     try {
